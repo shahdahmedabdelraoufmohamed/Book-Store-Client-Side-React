@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a20eaf71.css",
+    "main.js": "/static/js/main.c31a2f2a.js",
+    "static/media/author-book-store-book-cover-06.jpg": "/static/media/author-book-store-book-cover-06.d0834570a5c5edeab253.jpg",
+    "static/media/ln ynth.jpg": "/static/media/ln ynth.2d42f1d052b6e3fb87a1.jpg",
+    "static/media/web-logo.jpg": "/static/media/web-logo.8942d3d2d61083492fee.jpg",
+    "static/media/author-book-store-author-img.jpg": "/static/media/author-book-store-author-img.18eca5f664014fdfb1c2.jpg",
+    "static/media/author-book-store-hero-book-cover-img.jpg": "/static/media/author-book-store-hero-book-cover-img.843383a138527628d7a6.jpg",
+    "static/media/book-01.png": "/static/media/book-01.af7d62fe4f3b98296793.png",
+    "static/media/aedzekola.jpg": "/static/media/aedzekola.149d2b4d8787dd039f7c.jpg",
+    "static/media/fymmr.jpeg": "/static/media/fymmr.25e07433646f3a0c7ee4.jpeg",
+    "static/media/mzr3t_el7eoan.jpg": "/static/media/mzr3t_el7eoan.ec1b86129c9517687048.jpg",
+    "static/media/redux.cjs": "/static/media/redux.7edfc461ab353f1712ab.cjs",
+    "index.html": "/index.html",
+    "main.a20eaf71.css.map": "/static/css/main.a20eaf71.css.map",
+    "main.c31a2f2a.js.map": "/static/js/main.c31a2f2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a20eaf71.css",
+    "static/js/main.c31a2f2a.js"
+  ]
+}
