@@ -183,7 +183,7 @@ function RegitserComponent(props) {
             formData.append('email', registerFormData.email);
             formData.append('password', registerFormData.password);
             formData.append('certificate', certificate.certificate)
-            const response = await axios.post('http://127.0.0.1:8000/users/create-publisher/', formData);
+            const response = await axios.post('https://django-book-store.onrender.com/users/create-publisher/', formData);
             console.log('Publisher registration successful:', response.data);
             history.push('/login', { from: 'register' });
 
@@ -193,7 +193,7 @@ function RegitserComponent(props) {
             formData.append('last_name', registerFormData.lastName);
             formData.append('email', registerFormData.email);
             formData.append('password', registerFormData.password);
-            const response = await axios.post('http://127.0.0.1:8000/users/create/', formData);
+            const response = await axios.post('https://django-book-store.onrender.com/users/create/', formData);
             console.log('User registration successful:', response.data);
             history.push('/login', { from: 'register' });
 

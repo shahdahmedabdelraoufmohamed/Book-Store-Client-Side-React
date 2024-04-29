@@ -11,7 +11,7 @@ function BestBooks() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/best-rated-books/`)
+      .get(`https://django-book-store.onrender.com/best-rated-books/`)
       .then((res) => setRating(res.data))
       .catch((err) => setError(err.message));
   }, []);

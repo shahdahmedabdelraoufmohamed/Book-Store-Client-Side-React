@@ -13,7 +13,7 @@ function PublisherOrderList() {
   const publisherId = useContext(AuthContext).user ? useContext(AuthContext).user.user_id : 0;
 
   useEffect(() => {
-    api.get(`http://127.0.0.1:8000/api-order/orders/publisher/${publisherId}/`)
+    api.get(`https://django-book-store.onrender.com/api-order/orders/publisher/${publisherId}/`)
       .then((res) => {
         setOrders(res.data.orders);
         setFilteredOrders(res.data.orders); // Initialize filtered orders with all orders
@@ -92,6 +92,9 @@ function PublisherOrderList() {
           <button className="search-button-table filled-button filled-button:hover outline-button:hover">
             Search
           </button>
+          {filteredOrders.length === 0 && (
+            <div className="text-center mt-3">No results</div>
+          )}
         </div>
 
         <div className="container-fluid">
@@ -146,26 +149,27 @@ function PublisherOrderList() {
               </div>
             </div>
           ))}
-          {/* Pagination */}
-          <ul className="pagination justify-content-center mt-5">
-            <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-              <button onClick={prevPage} className="page-link" style={{ backgroundColor: '#4d3bc6', color: '#ffffff' }}>
-                Previous
-              </button>
-            </li>
-            {Array.from({ length: Math.ceil(filteredOrders.length / ordersPerPage) }).map((_, index) => (
-              <li key={index} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
-                <button onClick={() => paginate(index + 1)} className="page-link" style={{ backgroundColor: '#4d3bc6', color: '#ffffff', marginLeft: '10px' }}>
-                  {index + 1}
+          {filteredOrders.length > ordersPerPage && (
+            <ul className="pagination justify-content-center mt-5">
+              <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+                <button onClick={prevPage} className="page-link" style={{ backgroundColor: '#4d3bc6', color: '#ffffff' }}>
+                  Previous
                 </button>
               </li>
-            ))}
-            <li className={`page-item ${currentPage === Math.ceil(filteredOrders.length / ordersPerPage) ? 'disabled' : ''}`}>
-              <button onClick={nextPage} className="page-link" style={{ backgroundColor: '#4d3bc6', color: '#ffffff', marginLeft: '10px' }}>
-                Next
-              </button>
-            </li>
-          </ul>
+              {Array.from({ length: Math.ceil(filteredOrders.length / ordersPerPage) }).map((_, index) => (
+                <li key={index} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
+                  <button onClick={() => paginate(index + 1)} className="page-link" style={{ backgroundColor: '#4d3bc6', color: '#ffffff', marginLeft: '10px' }}>
+                    {index + 1}
+                  </button>
+                </li>
+              ))}
+              <li className={`page-item ${currentPage === Math.ceil(filteredOrders.length / ordersPerPage) ? 'disabled' : ''}`}>
+                <button onClick={nextPage} className="page-link" style={{ backgroundColor: '#4d3bc6', color: '#ffffff', marginLeft: '10px' }}>
+                  Next
+                </button>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
     </>

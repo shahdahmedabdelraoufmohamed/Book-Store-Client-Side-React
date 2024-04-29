@@ -29,7 +29,7 @@ function Profile() {
   let api = useAxios();
   useEffect(() => {
     api
-      .get(`http://127.0.0.1:8000/users/${user_id}/`)
+      .get(`https://django-book-store.onrender.com/users/${user_id}/`)
       .then(
         (res) => (
           setUser(res.data),
@@ -74,7 +74,7 @@ setOldPassword("");
     console.log(profile_image);
     api
       .patch(
-        `http://127.0.0.1:8000/users/${user_id}/update/`,
+        `https://django-book-store.onrender.com/users/${user_id}/update/`,
         {
           email: user.email,
           first_name: first_name,
@@ -110,7 +110,7 @@ setOldPassword("");
       return 0;
     }
     api
-      .patch(`http://127.0.0.1:8000/users/${user_id}/change-password/`, {
+      .patch(`https://django-book-store.onrender.com/users/${user_id}/change-password/`, {
         old_password: old_password,
         new_password: new_password,
         confirm_password: confirm_password,

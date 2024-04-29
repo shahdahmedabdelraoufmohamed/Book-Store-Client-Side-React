@@ -37,7 +37,7 @@ function RelatedProducts(props) {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/${props.book_id}/related-books/`)
+      .get(`https://django-book-store.onrender.com/${props.book_id}/related-books/`)
       .then((res) => setRelated(res.data))
       .catch((err) => setError(err.message));
   }, [props.book_id]);

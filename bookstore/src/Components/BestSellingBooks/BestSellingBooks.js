@@ -10,7 +10,7 @@ function BestSellingBooks() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/best-seller-books/`)
+      .get(`https://django-book-store.onrender.com/best-seller-books/`)
       .then((res) => setSelling(res.data))
       .catch((err) => setError(err.message));
   }, []);

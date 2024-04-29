@@ -18,7 +18,7 @@ function Cart() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api-order/${current_user}/cart`)
+      .get(`https://django-book-store.onrender.com/api-order/${current_user}/cart`)
       .then((res) => {
         setItems(res.data.cart.cart_items);
         setTotalPrice(res.data.cart.total_price_cart);
@@ -28,7 +28,7 @@ function Cart() {
 
   const handleOnDelete = (item_id) => {
     api
-      .delete(`http://localhost:8000/api-order/${current_user}/cart`, {
+      .delete(`https://django-book-store.onrender.com/api-order/${current_user}/cart`, {
         data: { cart_item_id: item_id },
         headers: {
           "Content-Type": "multipart/form-data",

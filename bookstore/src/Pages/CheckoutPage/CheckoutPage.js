@@ -43,7 +43,7 @@ function CheckoutPage() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api-order/${current_user}/cart`)
+      .get(`https://django-book-store.onrender.com/api-order/${current_user}/cart`)
       .then(
         (res) => (
           setItems(res.data.cart.cart_items),
@@ -79,7 +79,7 @@ function CheckoutPage() {
 
     api
       .post(
-        `http://127.0.0.1:8000/api-order/${user.user_id}/orders/create`,
+        `https://django-book-store.onrender.com/api-order/${user.user_id}/orders/create`,
         data,
         config
       )
@@ -92,7 +92,7 @@ function CheckoutPage() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api-order/${current_user}/cart`)
+      .get(`https://django-book-store.onrender.com/api-order/${current_user}/cart`)
       .then((res) => {
         setItems(res.data.cart.cart_items);
         setTotalPrice(res.data.cart.total_price_cart);
@@ -105,7 +105,7 @@ function CheckoutPage() {
       <div className="container py-4">
         <div className="mx-auto bg-white rounded shadow p-5">
           <form
-            action={`http://127.0.0.1:8000/api-order/${user.user_id}/orders/create`}
+            action={`https://django-book-store.onrender.com/api-order/${user.user_id}/orders/create`}
             method="POST"
             className="shipping-information-form"
           >

@@ -65,7 +65,7 @@ function ReviewWrapper(props) {
   };
 
   const deleteReview = (id) => {
-    // http://127.0.0.1:8000/rate/delete-rate/7
+    // https://django-book-store.onrender.com/rate/delete-rate/7
     // setReviews(reviews.filter((review) => review.id !== id));
     axios.delete(`${localhost}/rate/delete-rate/${id}`)
     .then((res) => (console.log(`${id} review has been deleted successfuly`),getAllRates(props.book_id)))
