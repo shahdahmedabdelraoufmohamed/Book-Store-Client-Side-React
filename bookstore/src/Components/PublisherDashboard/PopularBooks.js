@@ -5,7 +5,7 @@ function PopularBooks(props) {
     console.log(props.img)
     return (<>
         <div className="card col-lg-3 col-md-7 col-sm-12 mb-sm-3 book-img  ">
-            <img src={`https://django-book-store.onrender.com/${props.img}`} className="card-img-top d-block mx-auto pt-2 " alt="..." style={{ "width": "85%" }} />
+            <img src={`https://django-book-store.onrender.com${props.img}`} className="card-img-top d-block mx-auto pt-2 " alt="..." style={{ "width": "85%" }} />
             <div className="card-body">
                 <h3 className="card-title text-center">{props.title}</h3>
                 <p className="card-text text-center">{props.discr}</p>

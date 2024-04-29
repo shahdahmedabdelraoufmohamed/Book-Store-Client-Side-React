@@ -29,18 +29,18 @@ function Dashboard() {
     let api = useAxios()
     console.log(user)
     useEffect(() => {
-        api.get('get-publisher-books/')
+        api.get('https://django-book-store.onrender.com/get-publisher-books/')
             .then((res) => {
                 console.log(res)
                 setBooks(res.data.results)
             })
-            .then((api.get('account/publisher-authors/'))
+            .then((api.get('https://django-book-store.onrender.com/account/publisher-authors/'))
                 .then((res) => {
                     console.log("author res", res)
                     setAuthors(res.data.results)
                     setModalOpen(false)
                 }).catch((err) => console.log("Auth error", err)))
-            .then((api.get(`api-order/orders/publisher/${user.user_id}/`))
+            .then((api.get(`https://django-book-store.onrender.com/api-order/orders/publisher/${user.user_id}/`))
                 .then((res) => {
                     console.log("Orders data", res)
                     setOrders(res.data.orders)

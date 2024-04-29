@@ -61,7 +61,7 @@ function Cart() {
           <CartPage
             key={item.id}
             cart_id={item.id}
-            imageUrl={`http://127.0.0.1:8000${item.book.front_img}`}
+            imageUrl={`https://django-book-store.onrender.com${item.book.front_img}`}
             title={
               item.book.name.length > 18
                 ? item.book.name.substr(0, 18) + "..."

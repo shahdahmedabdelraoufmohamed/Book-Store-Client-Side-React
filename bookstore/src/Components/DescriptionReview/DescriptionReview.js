@@ -5,7 +5,7 @@ import axios from "axios";
 
 function DescriptionReview(props) {
   const [noOfReviews, setNoOfReviews] = useState(0);
-  const getAllRates=(id,localhost='http://localhost:8000')=>{  
+  const getAllRates=(id,localhost='https://django-book-store.onrender.com')=>{  
     axios.get(`${localhost}/rate/get-all-rates/${id}`)
   .then((res) => (console.log(res.data.data),setNoOfReviews(res.data.data.length)))
   .catch((err) => console.log(err));}

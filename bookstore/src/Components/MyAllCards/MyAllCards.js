@@ -27,7 +27,7 @@ function MyAllCards(props) {
 
   const dispatch = useDispatch();
   let api = useAxios();
-  const localhost = 'http://localhost:8000'
+  const localhost = 'https://django-book-store.onrender.com'
   const [cart, setCart] = useState([])
   const { user } = useContext(AuthContext);
   const current_user = (useContext(AuthContext).user) !== null ? (useContext(AuthContext).user.user_id) : 0

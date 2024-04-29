@@ -130,7 +130,7 @@ function PublisherOrderList() {
                             )}
                             <td>
                               <img
-                                src={`http://127.0.0.1:8000${orderItem.book.front_img}`}
+                                src={`https://django-book-store.onrender.com${orderItem.book.front_img}`}
                                 alt={orderItem.name}
                                 className="order-image"
                               />

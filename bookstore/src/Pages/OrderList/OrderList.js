@@ -19,7 +19,7 @@ function OrderList() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const nextPage = () => setCurrentPage(currentPage + 1);
   const prevPage = () => setCurrentPage(currentPage - 1);
-  const localhost='http://localhost:8000'
+  const localhost='https://django-book-store.onrender.com'
   const [orderData,setOrderData]=useState([{
     order_date:"",
     order_items:[]
@@ -60,7 +60,7 @@ function OrderList() {
               <tr className="text-center">
                  <td>
                    <img
-                     src={`http://127.0.0.1:8000${item.book.front_img}`}
+                     src={`https://django-book-store.onrender.com${item.book.front_img}`}
                      className=""
                      style={{ width: "80px", objectFit: "cover" }}
                    />
@@ -81,7 +81,7 @@ function OrderList() {
             <tr className="text-center">
               <td>
                 <img
-                  src={`http://127.0.0.1:8000${order.book.front_img}`}
+                  src={`https://django-book-store.onrender.com${order.book.front_img}`}
                   className=""
                   style={{ width: "80px", objectFit: "cover" }}
                 />

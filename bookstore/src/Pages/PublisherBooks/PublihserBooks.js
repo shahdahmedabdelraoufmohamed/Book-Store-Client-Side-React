@@ -29,7 +29,7 @@ function PublisherBooks() {
                     <PublisherBooksCards
                         id= {book.id}
                         key={book.id}
-                        imageUrl={`https://django-book-store.onrender.com/${book.front_img}`}
+                        imageUrl={`https://django-book-store.onrender.com${book.front_img}`}
                         title={book.name}
                         category={book.category_name}
                         path={`/viewbook/${book.id}`}

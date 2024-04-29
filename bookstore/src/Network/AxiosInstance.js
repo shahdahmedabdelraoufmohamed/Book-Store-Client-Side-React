@@ -9,7 +9,7 @@ import { AuthContext } from "../Context/AuthContext";
 let authTokens = localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null
 
 console.log("Authtokens", authTokens)
-const baseURL = "http://127.0.0.1:8000"
+const baseURL = "https://django-book-store.onrender.com"
 const useAxios = () => {
 
     const {  authTokens, setAuthTokens, setUser, loading, setLoading, user } = useContext(AuthContext)

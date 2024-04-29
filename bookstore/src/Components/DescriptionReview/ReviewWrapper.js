@@ -9,11 +9,11 @@ import { AuthContext } from "../../Context/AuthContext";
 
 function ReviewWrapper(props) {
   const [reviews, setReviews] = useState([]);
-  const localhost='http://localhost:8000'
+  const localhost='https://django-book-store.onrender.com'
   const current_user=(useContext(AuthContext).user)!==null?(useContext(AuthContext).user.user_id):0
   const is_publisher=current_user? useContext(AuthContext).user.is_publisher?true:false:false
   const [rate, setRate] = useState(null);
-  const getAllRates=(id,localhost='http://localhost:8000')=>{  
+  const getAllRates=(id,localhost='https://django-book-store.onrender.com')=>{  
     axios.get(`${localhost}/rate/get-all-rates/${id}`)
   .then((res) => (console.log(res.data.data),setReviews(res.data.data),props.getNumOfReviews(res.data.data.length)))
   .catch((err) => console.log(err));}

@@ -20,7 +20,7 @@ function Books() {
     const [skipItem, setSkipItem] = useState(0);
     const [pageNumber, setPageNumber] = useState(0);
 
-    const localhost = 'http://localhost:8000'
+    const localhost = 'https://django-book-store.onrender.com'
     const [books, setBooks] = useState([])
 
     const categorybooks = useSelector((state) => state.categoryFilter);

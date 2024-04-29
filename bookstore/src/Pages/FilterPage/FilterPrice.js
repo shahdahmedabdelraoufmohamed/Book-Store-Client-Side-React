@@ -18,7 +18,7 @@ function Books() {
   const [skipItem, setSkipItem] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const localhost = 'http://localhost:8000'
+  const localhost = 'https://django-book-store.onrender.com'
   const [books, setBooks] = useState([])
 
   const fromPrice = useSelector((state) => state.fromPrice);

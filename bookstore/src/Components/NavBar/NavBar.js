@@ -44,7 +44,7 @@ function NavBar() {
   let myName = useContext(AuthContext);
 
   // for Cart
-  const localhost = "http://localhost:8000";
+  const localhost = "https://django-book-store.onrender.com";
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

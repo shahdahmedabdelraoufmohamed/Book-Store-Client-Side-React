@@ -7,7 +7,7 @@ import { AuthContext } from "../../Context/AuthContext";
 export function CartPage(props) {
     let api = useAxios();
     const [Quantity, setQuantity] = useState(props.quantity);
-    const localhost = 'http://localhost:8000'
+    const localhost = 'https://django-book-store.onrender.com'
     const current_user = (useContext(AuthContext).user) !== null ? (useContext(AuthContext).user.user_id) : 0
     useEffect(() => {
         api.post(`${localhost}/api-order/${current_user}/cart`, {

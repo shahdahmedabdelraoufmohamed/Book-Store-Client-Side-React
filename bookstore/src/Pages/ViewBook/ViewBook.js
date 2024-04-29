@@ -16,9 +16,9 @@ function ViewBook() {
   const [amount, setAmount] = useState(1);
   const [noOfReviews, setNoOfReviews] = useState(0);
   const book_name = useParams().id;
-  const localhost = 'http://localhost:8000'
-  // const getAllRates=(id,localhost='http://localhost:8000')=>{  
-  // const getAllRates=(id,localhost='http://localhost:8000')=>{
+  const localhost = 'https://django-book-store.onrender.com'
+  // const getAllRates=(id,localhost='https://django-book-store.onrender.com')=>{  
+  // const getAllRates=(id,localhost='https://django-book-store.onrender.com')=>{
   //   axios.get(`${localhost}/rate/get-all-rates/${id}`)
   // .then((res) => (console.log(res.data.data),setReviews(res.data.data)))
   // .catch((err) => console.log(err));}

@@ -51,7 +51,7 @@ function RelatedProducts(props) {
             {related.map((book) => (
               <MyCard
                 key={book.id}
-                imageUrl={`http://127.0.0.1:8000${book.front_img}`}
+                imageUrl={`https://django-book-store.onrender.com${book.front_img}`}
                 title={book.name}
                 category={book.category_name}
                 path={`/viewbook/${book.id}`}
